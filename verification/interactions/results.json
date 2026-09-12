@@ -1,0 +1,14 @@
+{
+  "date": "2026-09-12T07:45:41.762Z",
+  "browser": "152.0.4191.66",
+  "results": [
+    "Tight native navigation buttons are queryable without modifying DOM or breaking their click; spacious heading annotations preserve all tested boxes",
+    "Main and child cards drag within viewport; Japanese example grammar and compounds open separately with parent and active term preserved",
+    "English examples support nested lookup, bounded back history and one-click collection; Esc closes only the child",
+    "Child requests ignore canceled slow responses; missing AI and network failures remain local and basic lookup still works",
+    "Mixed English / kanji examples remain queryable; selection text is unchanged, selection suppresses hover, keyboard Enter opens a child",
+    "Parent and child remain inside viewport at 80/100/150 percent CSS zoom, narrow screens, dark theme and reduced motion"
+  ],
+  "errors": [],
+  "transport": "Mock AI; real bundle, IPADIC and pointer events"
+}

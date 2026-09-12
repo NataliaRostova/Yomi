@@ -1,0 +1,13 @@
+{
+  "date": "2026-09-11T16:59:22.322Z",
+  "browser": "152.0.4191.66",
+  "results": [
+    "Only crowded text blocks gain local leading; widths and sufficient-spacing paragraphs stay unchanged; visible labels do not overlap source glyph boxes",
+    "Window scroll maintains annotation/source offsets synchronously in the same JS task, with no scroll event or animation-frame wait",
+    "Nested scroll container uses the same native motion as its text, without a JavaScript follow-up",
+    "Rewrapping at a narrower width recomputes per-line placement and collision limits",
+    "CSS zoom and dynamic line-height changes recompute safe annotation geometry",
+    "Disabling annotations removes anchors and restores owned spacing while preserving a subsequent site-authored line-height change"
+  ],
+  "errors": []
+}

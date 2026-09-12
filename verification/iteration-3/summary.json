@@ -1,0 +1,20 @@
+{
+  "version": "3.0.0",
+  "verifiedAt": "2026-09-10T19:20:22.986Z",
+  "unitTests": 20,
+  "unitResult": "passed",
+  "browserGroups": 22,
+  "browser": "152.0.4191.66",
+  "uncaughtBrowserErrors": [],
+  "bundleSha256": "ff7c6c43ec66764a0be5f40b724dbe598fb91b58b20b76881ca9a297d183c739",
+  "sourceReports": [
+    "verification/iteration-3/results.json",
+    "verification/regression-v3/results.json"
+  ],
+  "limitations": [
+    "AI responses are mocked, not real account quality tests",
+    "Demo IndexedDB persistence verified; real userscript-manager multi-origin installation not exercised",
+    "CSS zoom verified, not browser toolbar zoom",
+    "Scale test validates storage access pattern in a memory adapter, not database throughput"
+  ]
+}

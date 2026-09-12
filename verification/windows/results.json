@@ -1,0 +1,12 @@
+{
+  "date": "2026-09-11T14:45:15.393Z",
+  "browser": "152.0.4191.66",
+  "results": [
+    "Navigation visibly has kana and trusted source words before hover; button HTML, click handler and page geometry are unchanged",
+    "Reading terminal supports eight-edge resize, full-viewport drag, maximize/restore and retained geometry across tabs and reopening",
+    "Library and Review use the same movable/resizable window and retain their geometry",
+    "Main card and example subcard both resize, drag to bottom-right edge, maximize and restore without replacing the parent query",
+    "User-sized windows recover inside smaller viewports and maximize correctly in narrow dark reduced-motion mode"
+  ],
+  "errors": []
+}

@@ -1,0 +1,15 @@
+{
+  "date": "2026-09-12T07:43:21.178Z",
+  "browser": "152.0.4191.66",
+  "results": [
+    "Library grammar row opens the complete original card, with saved sentence, full pattern, kana and annotated Japanese examples",
+    "Saved vocabulary reopens with its reading; editing is separate and rereading does not count as a new encounter or formal review",
+    "English UK/US IPA, original inflected form, original sentence and all senses survive refresh; returning retains the search filter",
+    "Example child cards show dual IPA; SRS reveals pronunciation after the answer and can open the full card without losing the current question",
+    "Manual IPA editing is persisted and its provenance appears on the reopened card",
+    "Explicit AI supplementation uses the saved sentence and persists surface-form IPA across refresh without changing categories or learning counters",
+    "Changing the queried word detaches the previous saved item and cannot overwrite its knowledge"
+  ],
+  "errors": [],
+  "transport": "Real bundle and IndexedDB; AI responses mocked, no real account request"
+}

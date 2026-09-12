@@ -1,0 +1,44 @@
+{
+  "date": "2026-09-11T17:53:31.552Z",
+  "browser": "152.0.4191.66",
+  "results": [
+    "Initial annotations and grammar markers preserve paragraph dimensions; tight lines avoid inserting inline ruby",
+    "Whole grammar active range persists inside the panel; switching to compound vocabulary does not replay panel slide",
+    "All portions of grammar and split katakana compounds target the full expression; inline link handlers survive",
+    "Dynamic grammar markers are incremental and do not cause observer loops",
+    "1000-character API fields stay in the panel; low confidence is never annotated; trusted short source adds no reflow or lost active range",
+    "Canceled slow request cannot replace the last active word; network errors remain local and dictionary queries work",
+    "Vocabulary and complete grammar collect in one click; IndexedDB reload restores them; second URL is one encounter without duplicate item",
+    "Review uses the actual saved sentence; grading persists schedule, counters and ReviewRecord independently of encounters",
+    "Light/dark, 80–175% CSS zoom, 390px viewport and reduced-motion settings retain usable overlay layout",
+    "Injected persistence failure is visible on the card without disabling basic dictionary or reading interactions"
+  ],
+  "errors": [],
+  "requests": [
+    {
+      "word": "ネブラフラックス",
+      "context": "ネブラフラックス　ゼノブリッジ　ルミナフォージ"
+    },
+    {
+      "word": "ゼノブリッジ",
+      "context": "ネブラフラックス　ゼノブリッジ　ルミナフォージ"
+    },
+    {
+      "word": "ルミナフォージ",
+      "context": "ネブラフラックス　ゼノブリッジ　ルミナフォージ"
+    },
+    {
+      "word": "slowword",
+      "context": "slowword"
+    },
+    {
+      "word": "finalword",
+      "context": "finalword"
+    },
+    {
+      "word": "networkfailure",
+      "context": "networkfailure"
+    }
+  ],
+  "scope": "Actual bundled userscript + real IPADIC + real demo IndexedDB; AI transport mocked; browser-manager cross-origin GM not exercised"
+}

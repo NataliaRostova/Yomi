@@ -1,0 +1,12 @@
+{
+  "date": "2026-09-11T16:57:43.433Z",
+  "browser": "152.0.4191.66",
+  "results": [
+    "DeepSeek Flash auto adaptation reaches the actual card with wrapped JSON and no extra retry",
+    "Truncation gets one bounded retry; only the final answer is rendered",
+    "Repeated malformed output ends in a specific visible error after two attempts",
+    "Generic proxy mode preserves ordinary Chat Completions parameters"
+  ],
+  "errors": [],
+  "transport": "Simulated DeepSeek response shapes, no real account request"
+}

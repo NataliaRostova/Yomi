@@ -1,0 +1,13 @@
+{
+  "date": "2026-09-11T17:01:58.462Z",
+  "browser": "152.0.4191.66",
+  "results": [
+    "Mixed-size badges and side-column text do not enlarge single-line list items; all 30px-source annotations use the same 16.5px font",
+    "Horizontal space borrowing keeps over 90% of fixture readings complete at the uniform font size, with no annotation-to-annotation collisions",
+    "Repeated mutations and resize passes do not accumulate line-height or padding",
+    "Actual source sentence is separate from two local senses with two examples each; no unsupported context-match claim",
+    "Examples under a later sense support nested word lookup",
+    "Structured AI response renders sense-specific examples and contextual match separately from original text, using bounded opt-in context"
+  ],
+  "errors": []
+}

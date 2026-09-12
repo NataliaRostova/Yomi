@@ -1,0 +1,13 @@
+{
+  "date": "2026-09-11T17:53:11.681Z",
+  "browser": "152.0.4191.66",
+  "results": [
+    "Collect picker creates categories, selects multiple memberships and reopens with saved choices; Esc cancels without changing them",
+    "Two categories share a single learning item; refresh preserves catalog and memberships",
+    "Library item details can change membership without copying the item or changing its learning record",
+    "Rename keeps membership; deleting a category preserves its word and exposes it in Unfiled when no live categories remain",
+    "Custom entries in another language can be created and filed into a user-defined language category",
+    "Duplicate names show a local error; Library adapts to a narrow dark viewport without horizontal overflow"
+  ],
+  "errors": []
+}

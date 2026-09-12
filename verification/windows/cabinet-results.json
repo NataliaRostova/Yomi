@@ -1,0 +1,92 @@
+{
+  "date": "2026-09-11T12:08:52.392Z",
+  "url": "https://www.cao.go.jp/others/csi/security/20250812notice.html",
+  "browser": "152.0.4191.66",
+  "observed": [
+    {
+      "tag": "BUTTON",
+      "text": "内閣府の政策",
+      "font": "20px",
+      "lineHeight": "20px",
+      "html": "<button aria-controls=\"globalNavDrop-01\" aria-expanded=\"false\">内閣府の政策</button>"
+    },
+    {
+      "tag": "H1",
+      "text": "内閣府を騙った電子メールにご注意ください",
+      "font": "34px",
+      "lineHeight": "41.9968px",
+      "html": "<h1>内閣府を騙った電子メールにご注意ください</h1>"
+    }
+  ],
+  "before": {
+    "h1": {
+      "x": 380,
+      "y": 248,
+      "width": 840,
+      "height": 63.984375,
+      "top": 248,
+      "right": 1220,
+      "bottom": 311.984375,
+      "left": 380
+    },
+    "body": {
+      "x": 0,
+      "y": 0,
+      "width": 1600,
+      "height": 1100,
+      "top": 0,
+      "right": 1600,
+      "bottom": 1100,
+      "left": 0
+    },
+    "button[aria-controls=\"globalNavDrop-01\"]": {
+      "x": 654,
+      "y": 85,
+      "width": 140,
+      "height": 46,
+      "top": 85,
+      "right": 794,
+      "bottom": 131,
+      "left": 654
+    }
+  },
+  "after": {
+    "h1": {
+      "x": 380,
+      "y": 248,
+      "width": 840,
+      "height": 63.984375,
+      "top": 248,
+      "right": 1220,
+      "bottom": 311.984375,
+      "left": 380
+    },
+    "body": {
+      "x": 0,
+      "y": 0,
+      "width": 1600,
+      "height": 1100,
+      "top": 0,
+      "right": 1600,
+      "bottom": 1100,
+      "left": 0
+    },
+    "button[aria-controls=\"globalNavDrop-01\"]": {
+      "x": 654,
+      "y": 85,
+      "width": 140,
+      "height": 46,
+      "top": 85,
+      "right": 794,
+      "bottom": 131,
+      "left": 654
+    }
+  },
+  "results": [
+    "Native top navigation displays kana and opens 内閣府 card",
+    "Single-line H1 annotations restored",
+    "H1, body and nav bounding boxes unchanged",
+    "Original navigation button still expands menu"
+  ],
+  "ai": "Disabled"
+}
