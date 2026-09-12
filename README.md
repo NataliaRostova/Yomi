@@ -16,14 +16,39 @@
 
 **3.0.7 收藏回到完整词卡**：点击条目恢复收录时的表达、释义、用法与原句，编辑操作独立。日语词头和卡内例句增加假名；英语显示 UK／US 音标及来源，未收录时明确留空，支持 AI 补充后保存及手动编辑。复习揭晓后可打开完整卡片，再返回当前题目。见 [实测截图与覆盖边界](verification/SAVED-CARDS.md)。
 
-## 安装或从旧版更新
+## 安装或更新
 
-1. 打开 [Tampermonkey](https://www.tampermonkey.net/) 管理面板，编辑已有的 **Yomi · 日英阅读助手**。
-2. 用 [`dist/yomi-reader.user.js`](dist/yomi-reader.user.js) 的全部内容替换旧代码，保存并刷新网页。新用户在 Tampermonkey 中新建脚本后粘贴。
-3. 版本应显示为 **3.0.7**；右下角入口变为 `YOMI / 03`。不要同时启用两份 Yomi。
+### 方式一：通过脚本管理器安装
 
-脚本名称、namespace 和存储键保持不变，原有 API 设置、站点偏好和下载词典缓存继续复用。新增设置使用默认值。未配置自动更新地址，更新采用手动替换代码。
+请先安装任一用户脚本管理器：
 
+- [Tampermonkey（篡改猴）](https://www.tampermonkey.net/)
+- [ScriptCat（脚本猫）](https://scriptcat.org/)
+
+随后在对应的脚本搜索 / 脚本市场中搜索：
+
+**Yomi · 日英阅读助手**
+
+找到 Yomi 后直接安装即可。后续版本更新也建议优先通过脚本管理器完成。
+
+### 方式二：手动安装
+
+也可以直接使用仓库中的编译版本：
+
+[`dist/yomi-reader.user.js`](https://github.com/NataliaRostova/Yomi/blob/main/dist/yomi-reader.user.js)
+
+1. 打开上面的脚本文件，复制其中的全部内容。
+2. 在 Tampermonkey 或 ScriptCat 中新建一个用户脚本。
+3. 删除编辑器中的默认内容，并粘贴 `yomi-reader.user.js` 的全部代码。
+4. 保存脚本并刷新网页即可使用。
+
+如果已经安装旧版 Yomi，也可以直接编辑现有脚本，用最新版 `dist/yomi-reader.user.js` 的全部内容覆盖旧代码后保存。
+
+当前版本应显示为 **3.0.7**，右下角入口显示 `YOMI / 03`。
+
+> 请不要同时启用多个 Yomi 脚本副本，否则可能发生重复注音、重复查询或界面冲突。
+
+脚本名称、namespace 和存储键保持不变时，覆盖更新不会主动清除原有的 API 设置、站点偏好、词库和学习数据。
 ## 日常使用
 
 - 本地结果约 25ms，未知词默认等待 250ms（可调 150–700ms）后查询**支持范围内的普通日英文本**。查询不要求词语有注音，也不要求本地词典命中。
