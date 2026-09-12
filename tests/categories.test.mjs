@@ -1,0 +1,17 @@
+import test from 'node:test';import assert from 'node:assert/strict';import {LearningRepository,PREFIX} from '../src/learning.js';
+const memory=()=>{const map=new Map();return {map,async get(k,d){return structuredClone(map.get(k)??d);},async set(k,v){map.set(k,structuredClone(v));},async keys(){return [...map.keys()];}};};
+test('Multiple categories refer to one item and one review history; rename, delete and reload preserve learning data',async()=>{
+ const storage=memory(),repo=new LearningRepository(storage);await repo.ready;const a=await repo.createCategory('韩语'),b=await repo.createCategory('工作');const info={word:'안녕하세요',base:'안녕하세요',type:'custom'},item=await repo.collect(info,{meaning:'您好'},null,null,[a.id,b.id]);
+ assert.equal(repo.query({category:a.id}).total,1);assert.equal(repo.query({category:b.id}).items[0].id,item.id);assert.equal(repo.items.size,1);assert.equal(repo.categoryCounts().counts.get(a.id),1);
+ await repo.review(item.id,'good',{mode:'forward'});await repo.changeCategory(a.id,'韩国语');await repo.deleteCategory(b.id);assert.equal(repo.categoryList()[0].name,'韩国语');assert.equal(repo.query({category:b.id}).total,0);assert.equal(repo.items.get(item.id).reviewCount,1);
+ await repo.deleteCategory(a.id);assert.equal(repo.query({category:'unfiled'}).total,1);const loaded=new LearningRepository(storage);await loaded.ready;assert.equal(loaded.items.size,1);assert.deepEqual(loaded.categoryIds(loaded.find(info)),[]);assert.equal((await loaded.records('reviews',item.id,1)).length,1);
+});
+test('Membership edits and duplicate collection never reset counters, overwrite meanings or duplicate a word',async()=>{
+ const repo=new LearningRepository(memory());await repo.ready;const a=await repo.createCategory('ニュース'),b=await repo.createCategory('N1'),info={word:'政策',base:'政策',lang:'ja'};const item=await repo.collect(info,{meaning:'政策'},null,null,[a.id]);await repo.collect(info,{meaning:'不可覆盖'},null,null,[a.id,b.id]);assert.equal(repo.items.size,1);assert.equal(repo.items.get(item.id).meaningZh,'政策');assert.equal(repo.items.get(item.id).encounterCount,1);await repo.setCategories(item.id,[]);assert.equal(repo.query({category:'unfiled'}).total,1);
+});
+test('Category names are validated; concurrent changes use fresh catalog and deleted selections fail visibly',async()=>{
+ const s=memory(),a=new LearningRepository(s),b=new LearningRepository(s);await Promise.all([a.ready,b.ready]);await Promise.all([a.createCategory('日语'),b.createCategory('英语')]);await a.load();assert.equal(a.categoryList().length,2);await assert.rejects(a.createCategory(' 日语 '),/同名/);await assert.rejects(a.createCategory(' '),/1–40/);const c=a.categoryList()[0];await b.deleteCategory(c.id);await assert.rejects(a.collect({word:'test',lang:'en'},{meaning:'测试'},null,null,[c.id]),/已被删除/);assert.equal(a.items.size,0);
+});
+test('Legacy items remain unfiled and deletion does not rewrite all indexed learning items',async()=>{
+ const s=memory(),repo=new LearningRepository(s);await repo.ready;const item=await repo.collect({word:'old',lang:'en'},{meaning:'旧资料'});assert.equal(repo.query({category:'unfiled'}).items[0].id,item.id);const c=await repo.createCategory('旧资料');await repo.setCategories(item.id,[c.id]);const original=structuredClone(s.map.get(PREFIX+'item:'+item.id));await repo.deleteCategory(c.id);assert.deepEqual(s.map.get(PREFIX+'item:'+item.id),original);assert.equal(repo.query({category:'unfiled'}).total,1);
+});

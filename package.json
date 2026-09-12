@@ -1,0 +1,30 @@
+{
+  "name": "yomi-reader-userscript",
+  "version": "3.0.7",
+  "private": true,
+  "description": "Japanese ruby annotations and Chinese hover dictionary for Japanese and English",
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "test:browser": "node tests/browser.mjs",
+    "test:learning": "node tests/iteration3-browser.mjs",
+    "test:ai": "node tests/ai-response-browser.mjs",
+    "test:interactions": "node tests/interactions-browser.mjs",
+    "test:windows": "node tests/windows-browser.mjs",
+    "test:scrolling": "node tests/scrolling-browser.mjs",
+    "test:cabinet": "node tests/cabinet-browser.mjs",
+    "demo": "node scripts/serve.mjs",
+    "test:precision": "node tests/precision-browser.mjs",
+    "test:categories": "node tests/categories-browser.mjs",
+    "test:saved-cards": "node tests/saved-cards-browser.mjs"
+  },
+  "dependencies": {
+    "fflate": "0.8.2",
+    "kuromoji": "0.1.2"
+  },
+  "devDependencies": {
+    "esbuild": "0.25.9",
+    "playwright": "1.55.0"
+  }
+}

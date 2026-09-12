@@ -1,0 +1,8 @@
+<!doctype html><html lang="ja"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Yomi · 多行注音与同步滚动</title>
+<style>body{margin:0;background:#f6f7f5;color:#25312b;font:20px/1.8 system-ui}header{position:sticky;top:0;z-index:5;background:#fff;padding:25px 40px;border-bottom:1px solid #ccc}button{font:20px/1 system-ui;background:none;border:0;color:inherit;padding:14px}main{max-width:1000px;margin:70px auto;padding:0 30px}h1{font-size:32px;line-height:1.45;font-weight:400;color:#174fa9}p{font-size:24px}h2{font:16px/1.8 system-ui;color:#657468;margin-top:45px}.compact{line-height:1.2;max-width:480px}.flow{line-height:2.1;max-width:500px}.scroller{height:250px;overflow:auto;border:1px solid #899b8d;padding:30px;background:#fff}.scroller p{max-width:510px;line-height:1.7}.spacer{height:450px}small{color:#657468}</style>
+<header><button id="nav">内閣府の政策</button><button>パワー データセンター</button><small lang="zh">多行布局 / 原生同步滚动验证</small></header>
+<main><h1 id="headline">参政党の初鹿野裕樹参院議員を書類送検　去年の選挙期間中のSNS投稿で刑事告訴</h1><p id="caption">テレビ朝日系（ANN）　9/11(金) 23:15</p>
+<h2 lang="zh">多行正文：注音只能使用真实行间留白</h2><p class="flow" id="flow">金融政策を検討する。市場の動向を踏まえて、金融政策を見直した。日本語を学ぶ学生が資料を確認する。政策を理解する。</p>
+<h2 lang="zh">紧行距：只补足本块的最小行距，保持注音可读</h2><p class="compact" id="tight">金融政策を検討する。市場の動向を踏まえて、金融政策を見直した。日本語を学ぶ学生が資料を確認する。</p>
+<h2 lang="zh">独立滚动容器</h2><div class="scroller" id="scroller"><p id="nested">金融政策を検討する。日本語を学ぶ学生が資料を確認する。市場の動向を踏まえて、政策を見直した。</p><div class="spacer"></div><p>金融政策と個人消費について検討する。</p></div><div class="spacer"></div><p>政策を確認する。日本語を学ぶ。</p></main>
+<script src="bridge.js"></script><script src="yomi-reader.js"></script></html>
