@@ -1,5 +1,9 @@
 # Yomi 03 · 日英阅读助手
+<p align="center">
+  <img src="assets/icon.png" width="128" alt="Yomi">
+</p>
 
+<h1 align="center">Yomi</h1>
 浏览器用户脚本：日语汉字平假名注音、片假名原词标注、日英悬浮中文词典与可选 AI 解释。第三轮已完成安全注音、完整语法识别、正文 Hover/Active 高亮、右侧资料面板动效，以及统一 Library 与间隔重复复习。保留独立查询、动态文本和可选 AI。
 
 3.0.1 修复 DeepSeek Flash 的 JSON 返回兼容问题：自动关闭思考并启用 JSON 输出、识别截断/空答案、最多补试一次。详见 [修复说明](verification/AI-JSON-FIX.md)。
