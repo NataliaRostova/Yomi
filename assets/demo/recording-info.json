@@ -1,0 +1,37 @@
+{
+  "createdAt": "2026-09-12T19:50:11.753Z",
+  "browser": "153.0.4234.32",
+  "source": "Production userscript on demo/showcase.html; real UI interactions and local dictionary; no AI transport",
+  "clips": [
+    {
+      "file": "assets/demo/hover-reading.gif",
+      "frames": 9,
+      "size": [
+        1200,
+        820
+      ],
+      "bytes": 139347,
+      "durationMs": 8860
+    },
+    {
+      "file": "assets/demo/example-explorer.gif",
+      "frames": 10,
+      "size": [
+        1200,
+        820
+      ],
+      "bytes": 151052,
+      "durationMs": 7750
+    },
+    {
+      "file": "assets/demo/collect-review.gif",
+      "frames": 25,
+      "size": [
+        1200,
+        820
+      ],
+      "bytes": 301689,
+      "durationMs": 15220
+    }
+  ]
+}
